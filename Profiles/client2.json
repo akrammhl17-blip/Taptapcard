@@ -1,15 +1,15 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "Habib shoes",
+  "description": "",
 
-  "profileImage": "",
-  "coverImage": "",
+  "profileImage": "/Taptapcard/assest/profile_client2.jpg",
+  "coverImage": "/Taptapcard/assest/cover_client2.jpg",
 
-  "instagram": "",
-  "facebook": "",
-  "tiktok": "",
+  "instagram": "https://www.instagram.com/shoes.habib?stkn=czcxbzF2MHF0aDNy",
+  "facebook": "https://www.facebook.com/share/1Bz4r7emGy/",
+  "tiktok": "https://www.tiktok.com/@habib..shoes?_r=1&_t=ZS-9A0p2N5yUCM",
 
-  "phone": "",
-  "whatsapp": "",
-  "googleMaps": ""
+  "phone": "0557869159",
+  "whatsapp": "+213557869159",
+  "googleMaps": "https://maps.app.goo.gl/dDVKcrF9jhYf1zxZ9"
 }
