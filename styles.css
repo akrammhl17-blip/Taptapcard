@@ -1,1 +1,266 @@
+* {
+  box-sizing: border-box;
+}
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(
+    135deg,
+    #faf9f7,
+    #eef1f4,
+    #e4e8ed
+  );
+  color: #171717;
+}
+
+/* الصفحة */
+
+.profile-card {
+  width: 100%;
+  max-width: 720px;
+  min-height: 100vh;
+  margin: auto;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+/* الغلاف */
+
+.cover {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* صورة البروفايل */
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+
+  margin: -75px auto 0;
+
+  padding: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  position: relative;
+  z-index: 5;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+/* الاسم */
+
+h1 {
+  margin: 25px 15px 8px;
+
+  font-size: 40px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+/* الوصف */
+
+#description {
+  margin: 0 25px 25px;
+
+  color: #777;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+/* روابط السوشيال */
+
+.social-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 0 25px;
+}
+
+.social-link {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 70px;
+
+  padding: 12px 20px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transition: 0.2s;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+
+  background: white;
+}
+
+/* أيقونة السوشيال */
+
+.social-icon {
+  width: 45px;
+
+  font-size: 30px;
+
+  text-align: center;
+}
+
+/* اسم السوشيال */
+
+.social-name {
+  flex: 1;
+
+  text-align: center;
+
+  font-size: 19px;
+
+  margin-right: 45px;
+}
+
+/* الهاتف والواتساب */
+
+.contact-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 32px 20px;
+}
+
+.contact-button {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 32px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s;
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+
+  background: white;
+}
+
+/* أسفل الصفحة */
+
+.footer {
+  padding-bottom: 30px;
+
+  color: #999;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+/* الهاتف */
+
+@media (max-width: 500px) {
+
+  .cover {
+    height: 215px;
+  }
+
+  .profile-picture {
+    width: 140px;
+    height: 140px;
+
+    margin-top: -70px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .social-links {
+    padding: 0 16px;
+  }
+
+  .social-link {
+    min-height: 68px;
+  }
+
+}
