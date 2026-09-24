@@ -18,7 +18,7 @@ const defaultProfile = {
 // قراءة ID الزبون من الرابط
 const params = new URLSearchParams(window.location.search);
 
-const profileId = params.get("id") || "demo";
+const profileId = params.get("id") || "syly";
 
 
 // تحميل بيانات الزبون
