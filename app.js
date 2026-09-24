@@ -52,48 +52,29 @@ async function loadProfile() {
 // عرض بيانات الزبون
 function displayProfile(profile) {
 
-  // الاسم
   document.getElementById("name").textContent =
     profile.name || defaultProfile.name;
 
-
-  // الوصف
   document.getElementById("description").textContent =
     profile.description || "";
 
+  const profileImage = document.getElementById("profileImage");
+  const coverImage = document.getElementById("coverImage");
 
-  // صورة البروفايل
-  const profileImage =
-    document.getElementById("profileImage");
+  profileImage.src = new URL(
+    profile.profileImage || defaultProfile.profileImage,
+    document.baseURI
+  ).href;
 
-  profileImage.src =
-    new URL(
-      profile.profileImage || defaultProfile.profileImage,
-      document.baseURI
-    ).href;
+  coverImage.src = new URL(
+    profile.coverImage || defaultProfile.coverImage,
+    document.baseURI
+  ).href;
 
-
-  // صورة الغلاف
-  const coverImage =
-    document.getElementById("coverImage");
-
-  coverImage.src =
-    new URL(
-      profile.coverImage || defaultProfile.coverImage,
-      document.baseURI
-    ).href;
-
-
-  // عنوان الصفحة
   document.title =
     profile.name || "TapTapCard";
 
-
-  // روابط السوشيال
   createSocialLinks(profile);
-
-
-  // الهاتف والواتساب والموقع
   createContactButtons(profile);
 }
 
