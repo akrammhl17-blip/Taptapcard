@@ -167,6 +167,18 @@ function createContactButtons(profile) {
   const whatsappButton =
     document.getElementById("whatsappButton");
 
+    const mapsButton =
+  document.getElementById("mapsButton");
+
+if (profile.googleMaps) {
+
+  mapsButton.href = profile.googleMaps;
+
+} else {
+
+  mapsButton.style.display = "none";
+
+}
 
   // الهاتف
   if (profile.phone) {
