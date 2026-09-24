@@ -27,7 +27,7 @@ async function loadProfile() {
   try {
 
     const response = await fetch(
-      `profiles/${profileId}.json`
+      `Profiles/${profileId}.json`
     );
 
     if (!response.ok) {
