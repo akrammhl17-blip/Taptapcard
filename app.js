@@ -61,15 +61,23 @@ function displayProfile(profile) {
   const profileImage = document.getElementById("profileImage");
   const coverImage = document.getElementById("coverImage");
 
+  if (profile.profileImage) {
   profileImage.src = new URL(
-    profile.profileImage || defaultProfile.profileImage,
+    profile.profileImage,
     document.baseURI
   ).href;
+} else {
+  profileImage.removeAttribute("src");
+}
 
+if (profile.coverImage) {
   coverImage.src = new URL(
-    profile.coverImage || defaultProfile.coverImage,
+    profile.coverImage,
     document.baseURI
   ).href;
+} else {
+  coverImage.removeAttribute("src");
+}
 
   document.title =
     profile.name || "TapTapCard";
