@@ -8,7 +8,11 @@
   <title>TapTapCard</title>
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -20,37 +24,66 @@
       <img id="coverImage" src="" alt="Cover">
     </div>
 
+
     <!-- Profile picture -->
     <div class="profile-picture">
       <img id="profileImage" src="" alt="Profile">
     </div>
 
+
     <!-- Name -->
     <h1 id="name">Nom du profil</h1>
+
 
     <!-- Description -->
     <p id="description"></p>
 
+
     <!-- Social media -->
     <div id="socialLinks" class="social-links"></div>
 
+
     <!-- Contact buttons -->
-    <!-- Social media -->
-<div id="socialLinks" class="social-links"></div>
+    <div class="contact-buttons">
 
-<!-- Contact buttons -->
-<div class="contact-buttons">
+      <!-- Phone -->
+      <a id="phoneButton"
+         class="contact-button"
+         href="#">
+        <i class="fa-solid fa-phone"></i>
+      </a>
 
-  <a id="phoneButton" class="contact-button" href="#">
-    <i class="fa-solid fa-phone"></i>
-  </a>
 
-  <a id="whatsappButton" class="contact-button" href="#" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+      <!-- WhatsApp -->
+      <a id="whatsappButton"
+         class="contact-button"
+         href="#"
+         target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
 
-  <a id="mapsButton" class="contact-button" href="#" target="_blank">
-    <i class="fa-solid fa-location-dot"></i>
-  </a>
 
-  </div>
+      <!-- Google Maps -->
+      <a id="mapsButton"
+         class="contact-button"
+         href="#"
+         target="_blank">
+        <i class="fa-solid fa-location-dot"></i>
+      </a>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+      TapTapCard
+    </div>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
