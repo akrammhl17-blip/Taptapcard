@@ -90,25 +90,25 @@ function createSocialLinks(profile) {
 
   const socialNetworks = [
 
-    {
-      name: "Instagram",
-      icon: "◎",
-      url: profile.instagram
-    },
+  {
+    name: "Instagram",
+    icon: '<i class="fa-brands fa-instagram"></i>',
+    url: profile.instagram
+  },
 
-    {
-      name: "Facebook",
-      icon: "f",
-      url: profile.facebook
-    },
+  {
+    name: "Facebook",
+    icon: '<i class="fa-brands fa-facebook-f"></i>',
+    url: profile.facebook
+  },
 
-    {
-      name: "TikTok",
-      icon: "♪",
-      url: profile.tiktok
-    }
+  {
+    name: "TikTok",
+    icon: '<i class="fa-brands fa-tiktok"></i>',
+    url: profile.tiktok
+  }
 
-  ];
+];
 
 
   socialNetworks.forEach(network => {
