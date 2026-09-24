@@ -10,7 +10,8 @@ const defaultProfile = {
   tiktok: "",
 
   phone: "",
-  whatsapp: ""
+  whatsapp: "",
+  googleMaps: ""
 };
 
 
