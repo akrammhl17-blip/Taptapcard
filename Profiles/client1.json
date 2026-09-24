@@ -1,15 +1,15 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "MDH SHOES",
+  "description": "Shoes for lady 👠",
 
   "profileImage": "",
   "coverImage": "",
 
-  "instagram": "",
-  "facebook": "",
-  "tiktok": "",
+  "instagram": "https://www.instagram.com/mdh_shoes_store?stkn=MW54OTl1bm11MnZscg==",
+  "facebook": "https://www.facebook.com/share/1BtVeNcKy1/",
+  "tiktok": "https://www.tiktok.com/@mdhshoes?_r=1&_t=ZS-9A0msCBs6as",
 
-  "phone": "",
-  "whatsapp": "",
-  "googleMaps": ""
+  "phone": "0556687510",
+  "whatsapp": "+213556687510",
+  "googleMaps": "https://maps.app.goo.gl/jVf2fwroBxvJ9emr8"
 }
