@@ -63,13 +63,25 @@ function displayProfile(profile) {
 
 
   // صورة البروفايل
-  document.getElementById("profileImage").src =
-    profile.profileImage || defaultProfile.profileImage;
+  const profileImage =
+    document.getElementById("profileImage");
+
+  profileImage.src =
+    new URL(
+      profile.profileImage || defaultProfile.profileImage,
+      document.baseURI
+    ).href;
 
 
   // صورة الغلاف
-  document.getElementById("coverImage").src =
-    profile.coverImage || defaultProfile.coverImage;
+  const coverImage =
+    document.getElementById("coverImage");
+
+  coverImage.src =
+    new URL(
+      profile.coverImage || defaultProfile.coverImage,
+      document.baseURI
+    ).href;
 
 
   // عنوان الصفحة
@@ -81,9 +93,8 @@ function displayProfile(profile) {
   createSocialLinks(profile);
 
 
-  // الهاتف والواتساب
+  // الهاتف والواتساب والموقع
   createContactButtons(profile);
-
 }
 
 
