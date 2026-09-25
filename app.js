@@ -139,16 +139,18 @@ function createSocialLinks(profile) {
 
 
     link.innerHTML = `
+  <span class="social-icon">
+    ${network.icon}
+  </span>
 
-      <span class="social-icon">
-        ${network.icon}
-      </span>
+  <span class="social-name">
+    ${network.name}
+  </span>
 
-      <span class="social-name">
-        ${network.name}
-      </span>
-
-    `;
+  <span class="social-arrow">
+    ›
+  </span>
+`;
 
 
     container.appendChild(link);
