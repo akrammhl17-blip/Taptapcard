@@ -1,15 +1,15 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "Élora Lingerie",
+  "description": "• Pyjamas doux & lingerie irrésistible 🌸 • Qualité supérieure & détails soignés 📦 • Livraison disponible sur 69 wilayas 🚚",
 
-  "profileImage": "",
-  "coverImage": "",
+  "profileImage": "/Taptapcard/assets/profile_client5.jpg",
+  "coverImage": "/Taptapcard/assets/cover_client5.jpg",
 
-  "instagram": "",
-  "facebook": "",
-  "tiktok": "",
+  "instagram": "https://www.instagram.com/elora.lingeriedz?stkn=dnIyd2xkanp3ZWg=",
+  "facebook": "https://www.facebook.com/share/19hGYXftip/",
+  "tiktok": "https://www.tiktok.com/@elora.lingeriedz?_r=1&_t=ZS-9A2CtAYVYCS",
 
-  "phone": "",
-  "whatsapp": "",
-  "googleMaps": ""
+  "phone": "0783772203",
+  "whatsapp": "+213783772203",
+  "googleMaps": "https://maps.app.goo.gl/niuu7oGvDHqMSbF18"
 }
