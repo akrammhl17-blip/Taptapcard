@@ -1,15 +1,15 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "Boutique Racha",
+  "description": "Produit de luxe",
 
-  "profileImage": "",
-  "coverImage": "",
+  "profileImage": "/Taptapcard/assets/profile_client3.jpg",
+  "coverImage": "Taptapcard/assets/cover_client3.jpg",
 
-  "instagram": "",
-  "facebook": "",
-  "tiktok": "",
+  "instagram": "https://www.instagram.com/boutique.racha02?stkn=OW43Z2RvM2gzdTh0",
+  "facebook": "https://www.facebook.com/share/18GfpCRye9/",
+  "tiktok": "https://www.tiktok.com/@boutiqueracha2?_r=1&_t=ZS-9A1fpIINAMY",
 
-  "phone": "",
-  "whatsapp": "",
-  "googleMaps": ""
+  "phone": "0558989125",
+  "whatsapp": "+213558989125",
+  "googleMaps": "https://maps.app.goo.gl/Ji2ave7BhfZtze269"
 }
