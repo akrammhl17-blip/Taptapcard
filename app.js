@@ -2,8 +2,8 @@ const defaultProfile = {
   name: "Nom du profil",
   description: "Votre présence digitale en un seul lien",
 
-  profileImage: "assets/profile-demo.svg",
-  coverImage: "assets/cover-demo.svg",
+  profileImage: "",
+  coverImage: "",
 
   instagram: "",
   facebook: "",
@@ -55,35 +55,57 @@ function displayProfile(profile) {
   document.getElementById("name").textContent =
     profile.name || defaultProfile.name;
 
+
   document.getElementById("description").textContent =
     profile.description || "";
 
-  const profileImage = document.getElementById("profileImage");
-  const coverImage = document.getElementById("coverImage");
 
+  const profileImage =
+    document.getElementById("profileImage");
+
+  const coverImage =
+    document.getElementById("coverImage");
+
+
+  // صورة البروفايل
   if (profile.profileImage) {
-  profileImage.src = new URL(
-    profile.profileImage,
-    document.baseURI
-  ).href;
-} else {
-  profileImage.removeAttribute("src");
-}
 
-if (profile.coverImage) {
-  coverImage.src = new URL(
-    profile.coverImage,
-    document.baseURI
-  ).href;
-} else {
-  coverImage.removeAttribute("src");
-}
+    profileImage.src = new URL(
+      profile.profileImage,
+      document.baseURI
+    ).href;
 
+  } else {
+
+    profileImage.removeAttribute("src");
+
+  }
+
+
+  // صورة الغلاف
+  if (profile.coverImage) {
+
+    coverImage.src = new URL(
+      profile.coverImage,
+      document.baseURI
+    ).href;
+
+  } else {
+
+    coverImage.removeAttribute("src");
+
+  }
+
+
+  // عنوان الصفحة
   document.title =
     profile.name || "TapTapCard";
 
+
   createSocialLinks(profile);
+
   createContactButtons(profile);
+
 }
 
 
@@ -98,25 +120,34 @@ function createSocialLinks(profile) {
 
   const socialNetworks = [
 
-  {
-    name: "Instagram",
-    icon: '<i class="fa-brands fa-instagram"></i>',
-    url: profile.instagram
-  },
+    {
+      name: "Instagram",
 
-  {
-    name: "Facebook",
-    icon: '<i class="fa-brands fa-facebook-f"></i>',
-    url: profile.facebook
-  },
+      icon:
+        "https://cdn.simpleicons.org/instagram",
 
-  {
-    name: "TikTok",
-    icon: '<i class="fa-brands fa-tiktok"></i>',
-    url: profile.tiktok
-  }
+      url: profile.instagram
+    },
 
-];
+    {
+      name: "Facebook",
+
+      icon:
+        "https://cdn.simpleicons.org/facebook/1877F2",
+
+      url: profile.facebook
+    },
+
+    {
+      name: "TikTok",
+
+      icon:
+        "https://cdn.simpleicons.org/tiktok/000000",
+
+      url: profile.tiktok
+    }
+
+  ];
 
 
   socialNetworks.forEach(network => {
@@ -139,18 +170,25 @@ function createSocialLinks(profile) {
 
 
     link.innerHTML = `
-  <span class="social-icon">
-    ${network.icon}
-  </span>
 
-  <span class="social-name">
-    ${network.name}
-  </span>
+      <span class="social-icon">
 
-  <span class="social-arrow">
-    ›
-  </span>
-`;
+        <img
+          src="${network.icon}"
+          alt="${network.name}"
+        >
+
+      </span>
+
+      <span class="social-name">
+        ${network.name}
+      </span>
+
+      <span class="social-arrow">
+        ›
+      </span>
+
+    `;
 
 
     container.appendChild(link);
@@ -160,7 +198,7 @@ function createSocialLinks(profile) {
 }
 
 
-// إنشاء أزرار الهاتف والواتساب
+// إنشاء أزرار الهاتف والواتساب وGoogle Maps
 function createContactButtons(profile) {
 
   const phoneButton =
@@ -169,18 +207,9 @@ function createContactButtons(profile) {
   const whatsappButton =
     document.getElementById("whatsappButton");
 
-    const mapsButton =
-  document.getElementById("mapsButton");
+  const mapsButton =
+    document.getElementById("mapsButton");
 
-if (profile.googleMaps) {
-
-  mapsButton.href = profile.googleMaps;
-
-} else {
-
-  mapsButton.style.display = "none";
-
-}
 
   // الهاتف
   if (profile.phone) {
@@ -190,12 +219,13 @@ if (profile.googleMaps) {
 
   } else {
 
-    phoneButton.style.display = "none";
+    phoneButton.style.display =
+      "none";
 
   }
 
 
-  // واتساب
+  // WhatsApp
   if (profile.whatsapp) {
 
     const number =
@@ -206,7 +236,22 @@ if (profile.googleMaps) {
 
   } else {
 
-    whatsappButton.style.display = "none";
+    whatsappButton.style.display =
+      "none";
+
+  }
+
+
+  // Google Maps
+  if (profile.googleMaps) {
+
+    mapsButton.href =
+      profile.googleMaps;
+
+  } else {
+
+    mapsButton.style.display =
+      "none";
 
   }
 
