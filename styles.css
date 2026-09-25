@@ -11,12 +11,14 @@ body {
 
 body {
   font-family: Georgia, "Times New Roman", serif;
+
   background: linear-gradient(
     135deg,
     #faf9f7,
     #eef1f4,
     #e4e8ed
   );
+
   color: #171717;
 }
 
@@ -26,35 +28,76 @@ body {
   width: 100%;
   max-width: 720px;
   min-height: 100vh;
+
   margin: auto;
 
   text-align: center;
 
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.72);
+
+  overflow: hidden;
 
   box-shadow:
     0 15px 45px rgba(0, 0, 0, 0.08);
-
-  overflow: hidden;
 }
 
-/* الغلاف */
+/* =========================
+   COVER
+========================= */
 
 .cover {
   width: 100%;
-  height: 240px;
+
+  height: 390px;
+
+  position: relative;
+
   overflow: hidden;
+
   background: #eeeeee;
 }
+
+/* الصورة */
 
 .cover img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   display: block;
 }
 
-/* صورة البروفايل */
+/* التدرج الذي يجعل الكوفر يختفي تدريجياً */
+
+.cover::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 220px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.96),
+    rgba(255, 255, 255, 1)
+  );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* =========================
+   PROFILE PHOTO
+========================= */
 
 .profile-picture {
   width: 150px;
@@ -62,17 +105,18 @@ body {
 
   margin: -75px auto 0;
 
-  padding: 5px;
+  padding: 6px;
 
   border-radius: 50%;
 
   background: white;
 
   position: relative;
-  z-index: 5;
+
+  z-index: 10;
 
   box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.12);
+    0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .profile-picture img {
@@ -86,7 +130,9 @@ body {
   display: block;
 }
 
-/* الاسم */
+/* =========================
+   NAME
+========================= */
 
 h1 {
   margin: 25px 15px 8px;
@@ -96,23 +142,35 @@ h1 {
   font-weight: 700;
 
   line-height: 1.15;
+
+  position: relative;
+
+  z-index: 5;
 }
 
-/* الوصف */
+/* =========================
+   DESCRIPTION
+========================= */
 
 #description {
-  margin: 0 25px 25px;
+  margin: 0 25px 30px;
 
-  color: #777;
+  color: #687685;
 
   font-family: Arial, sans-serif;
 
-  font-size: 16px;
+  font-size: 17px;
 
   line-height: 1.5;
+
+  position: relative;
+
+  z-index: 5;
 }
 
-/* روابط السوشيال */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .social-links {
   display: flex;
@@ -129,15 +187,15 @@ h1 {
 
   align-items: center;
 
-  min-height: 70px;
+  min-height: 72px;
 
-  padding: 12px 20px;
+  padding: 10px 22px;
 
-  border-radius: 20px;
+  border-radius: 40px;
 
   border: 1px solid rgba(255, 255, 255, 0.9);
 
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
 
   color: #111;
 
@@ -146,21 +204,24 @@ h1 {
   font-family: Arial, sans-serif;
 
   box-shadow:
-    0 5px 18px rgba(0, 0, 0, 0.05);
+    0 6px 20px rgba(0, 0, 0, 0.06);
 
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 .social-link:hover {
   transform: translateY(-2px);
 
   background: white;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* أيقونة السوشيال */
+/* الأيقونة */
 
 .social-icon {
-  width: 45px;
+  width: 48px;
 
   font-size: 30px;
 
@@ -172,76 +233,106 @@ h1 {
 .social-name {
   flex: 1;
 
-  text-align: center;
+  text-align: left;
 
   font-size: 19px;
 
-  margin-right: 45px;
+  margin-left: 15px;
 }
 
-/* الهاتف والواتساب */
+/* السهم */
+
+.social-arrow {
+  font-size: 28px;
+
+  color: #687685;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1;
+}
+
+/* =========================
+   CONTACT BUTTONS
+========================= */
 
 .contact-buttons {
-  display: flex;
+  display: grid;
 
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
 
-  align-items: center;
+  gap: 14px;
 
-  gap: 35px;
-
-  padding: 32px 20px;
+  padding: 28px 25px 14px;
 }
 
+/* زر الاتصال والواتساب */
+
 .contact-button {
-  width: 60px;
-  height: 60px;
+  min-height: 70px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  border-radius: 50%;
+  gap: 12px;
+
+  border-radius: 40px;
 
   background: rgba(255, 255, 255, 0.8);
 
-  color: #111;
+  color: #263b50;
 
   text-decoration: none;
 
-  font-size: 32px;
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
 
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.08);
+    0 6px 20px rgba(0, 0, 0, 0.06);
 
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 .contact-button:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
 
   background: white;
 }
 
-/* أسفل الصفحة */
+.contact-button i {
+  font-size: 30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
-  padding-bottom: 30px;
+  padding: 35px 20px 30px;
 
-  color: #999;
+  color: #7d8a97;
 
   font-family: Arial, sans-serif;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
-/* الهاتف */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 500px) {
 
   .cover {
-    height: 215px;
+    height: 360px;
+  }
+
+  .cover::after {
+    height: 210px;
   }
 
   .profile-picture {
@@ -253,6 +344,14 @@ h1 {
 
   h1 {
     font-size: 34px;
+
+    margin-top: 24px;
+  }
+
+  #description {
+    font-size: 16px;
+
+    margin-bottom: 28px;
   }
 
   .social-links {
@@ -261,6 +360,26 @@ h1 {
 
   .social-link {
     min-height: 68px;
+
+    padding: 10px 18px;
   }
 
+  .social-name {
+    font-size: 18px;
+  }
+
+  .contact-buttons {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-button {
+    min-height: 65px;
+
+    font-size: 16px;
+  }
+
+  .contact-button i {
+    font-size: 27px;
+  }
 }
