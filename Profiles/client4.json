@@ -1,15 +1,15 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "BS LUXURY",
+  "description": "🇨🇳",
 
-  "profileImage": "",
-  "coverImage": "",
+  "profileImage": "/Taptapcard/assets/cover_client4.jpg",
+  "coverImage": "/Taptapcard/assets/cover_client4.jpg",
 
-  "instagram": "",
-  "facebook": "",
-  "tiktok": "",
+  "instagram": "https://www.instagram.com/bs.luxury.chlef?stkn=MXFkYndmdHRvbmhobg==",
+  "facebook": "https://www.facebook.com/share/14tnbMiMcW3/",
+  "tiktok": "https://www.tiktok.com/@bs.luxury.chlef?_r=1&_t=ZS-9A1hUQ7CeEo",
 
-  "phone": "",
-  "whatsapp": "",
-  "googleMaps": ""
+  "phone": "0563198823",
+  "whatsapp": "+213563198823",
+  "googleMaps": "https://maps.app.goo.gl/fqY38V2qqd9TrgSX6"
 }
