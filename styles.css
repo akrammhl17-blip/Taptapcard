@@ -22,7 +22,10 @@ body {
   color: #171717;
 }
 
-/* الصفحة */
+
+/* =========================
+   PROFILE CARD
+========================= */
 
 .profile-card {
   width: 100%;
@@ -41,6 +44,7 @@ body {
     0 15px 45px rgba(0, 0, 0, 0.08);
 }
 
+
 /* =========================
    COVER
 ========================= */
@@ -57,8 +61,6 @@ body {
   background: #eeeeee;
 }
 
-/* الصورة */
-
 .cover img {
   width: 100%;
   height: 100%;
@@ -68,7 +70,8 @@ body {
   display: block;
 }
 
-/* التدرج الذي يجعل الكوفر يختفي تدريجياً */
+
+/* التدرج في أسفل الكوفر */
 
 .cover::after {
   content: "";
@@ -79,14 +82,14 @@ body {
   right: 0;
   bottom: 0;
 
-  height: 220px;
+  height: 230px;
 
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.35),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.96),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.92),
     rgba(255, 255, 255, 1)
   );
 
@@ -94,6 +97,7 @@ body {
 
   z-index: 2;
 }
+
 
 /* =========================
    PROFILE PHOTO
@@ -130,6 +134,7 @@ body {
   display: block;
 }
 
+
 /* =========================
    NAME
 ========================= */
@@ -147,6 +152,7 @@ h1 {
 
   z-index: 5;
 }
+
 
 /* =========================
    DESCRIPTION
@@ -168,6 +174,7 @@ h1 {
   z-index: 5;
 }
 
+
 /* =========================
    SOCIAL LINKS
 ========================= */
@@ -182,6 +189,7 @@ h1 {
   padding: 0 25px;
 }
 
+
 .social-link {
   display: flex;
 
@@ -189,13 +197,13 @@ h1 {
 
   min-height: 72px;
 
-  padding: 10px 22px;
+  padding: 10px 18px;
 
   border-radius: 40px;
 
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
 
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
 
   color: #111;
 
@@ -209,6 +217,7 @@ h1 {
   transition: 0.25s;
 }
 
+
 .social-link:hover {
   transform: translateY(-2px);
 
@@ -218,17 +227,78 @@ h1 {
     0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* الأيقونة */
+
+/* =========================
+   SOCIAL ICON
+========================= */
 
 .social-icon {
-  width: 48px;
+  width: 50px;
+  height: 50px;
 
-  font-size: 30px;
+  display: flex;
 
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #f5f5f5;
 }
 
-/* اسم السوشيال */
+.social-icon img {
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* Instagram */
+
+.social-link:nth-child(1) .social-icon {
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+}
+
+.social-link:nth-child(1) .social-icon img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* Facebook */
+
+.social-link:nth-child(2) .social-icon {
+  background: #1877f2;
+}
+
+.social-link:nth-child(2) .social-icon img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* TikTok */
+
+.social-link:nth-child(3) .social-icon {
+  background: #000;
+}
+
+.social-link:nth-child(3) .social-icon img {
+  filter: invert(1);
+}
+
+
+/* =========================
+   SOCIAL NAME
+========================= */
 
 .social-name {
   flex: 1;
@@ -240,17 +310,23 @@ h1 {
   margin-left: 15px;
 }
 
-/* السهم */
+
+/* =========================
+   ARROW
+========================= */
 
 .social-arrow {
-  font-size: 28px;
+  font-family: Arial, sans-serif;
+
+  font-size: 32px;
+
+  line-height: 1;
 
   color: #687685;
 
-  font-family: Arial, sans-serif;
-
-  line-height: 1;
+  padding-right: 4px;
 }
+
 
 /* =========================
    CONTACT BUTTONS
@@ -266,7 +342,8 @@ h1 {
   padding: 28px 25px 14px;
 }
 
-/* زر الاتصال والواتساب */
+
+/* جميع أزرار الاتصال */
 
 .contact-button {
   min-height: 70px;
@@ -281,7 +358,7 @@ h1 {
 
   border-radius: 40px;
 
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.82);
 
   color: #263b50;
 
@@ -289,7 +366,7 @@ h1 {
 
   font-family: Arial, sans-serif;
 
-  font-size: 18px;
+  font-size: 17px;
 
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.06);
@@ -297,15 +374,88 @@ h1 {
   transition: 0.25s;
 }
 
+
 .contact-button:hover {
   transform: translateY(-2px);
 
   background: white;
 }
 
-.contact-button i {
-  font-size: 30px;
+
+/* أيقونة الاتصال */
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
 }
+
+
+/* WhatsApp */
+
+.whatsapp-icon {
+  background: #25D366;
+}
+
+.whatsapp-icon img {
+  width: 27px;
+  height: 27px;
+}
+
+
+/* Phone */
+
+.phone-icon {
+  background: #8796a5;
+
+  color: white;
+
+  font-size: 25px;
+}
+
+
+/* Google Maps */
+
+.maps-icon {
+  background: white;
+
+  border: 1px solid #eeeeee;
+}
+
+.maps-icon img {
+  width: 31px;
+  height: 31px;
+}
+
+
+/* Google Maps يكون كامل العرض */
+
+.maps-button {
+  grid-column: 1 / -1;
+
+  justify-content: flex-start;
+
+  padding-left: 25px;
+
+  position: relative;
+}
+
+.maps-button .arrow {
+  margin-left: auto;
+
+  font-size: 32px;
+
+  color: #687685;
+}
+
 
 /* =========================
    FOOTER
@@ -321,6 +471,13 @@ h1 {
   font-size: 14px;
 }
 
+.heart {
+  margin-left: 5px;
+
+  font-size: 17px;
+}
+
+
 /* =========================
    MOBILE
 ========================= */
@@ -332,7 +489,7 @@ h1 {
   }
 
   .cover::after {
-    height: 210px;
+    height: 220px;
   }
 
   .profile-picture {
@@ -361,7 +518,17 @@ h1 {
   .social-link {
     min-height: 68px;
 
-    padding: 10px 18px;
+    padding: 9px 16px;
+  }
+
+  .social-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .social-icon img {
+    width: 31px;
+    height: 31px;
   }
 
   .social-name {
@@ -376,13 +543,12 @@ h1 {
   .contact-button {
     min-height: 65px;
 
-    font-size: 16px;
+    font-size: 15px;
   }
 
-  .contact-button i {
-    font-size: 27px;
+  .contact-icon {
+    width: 42px;
+    height: 42px;
   }
-}
-#mapsButton {
-  grid-column: 1 / -1;
+
 }
