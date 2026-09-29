@@ -1,14 +1,14 @@
 {
-  "name": "Nom du client",
-  "description": "Description de l'activité",
+  "name": "NAQRA |نقرة",
+  "description": "Cartes NFC intelligentes Partage instantané en 1tap Digital Identity. NFC. QR Votre identité, à votre image. Un geste. Un univers",
 
-  "profileImage": "",
-  "coverImage": "",
+  "profileImage": "/Taptapcard/assets/profile_client11.jpg",
+  "coverImage": "/Taptapcard/assets/cover_client11.jpg",
 
-  "instagram": "",
+  "instagram": "https://www.instagram.com/naqra.nfc?stkn=MXU1bzEzM2hrODYzZg==",
   "facebook": "",
   "tiktok": "",
-  "snapchat": "",
+  "snapchat": "https://www.snapchat.com/add/naqranfc02?share_id=W5KYmvA7rRU&locale=fr-FR",
   "website": "",
 
   "phone": "",
