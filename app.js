@@ -8,6 +8,8 @@ const defaultProfile = {
   instagram: "",
   facebook: "",
   tiktok: "",
+  snapchat: "",
+  website: "",
 
   phone: "",
   whatsapp: "",
@@ -109,7 +111,7 @@ function displayProfile(profile) {
 }
 
 
-// إنشاء روابط Instagram / Facebook / TikTok
+// إنشاء روابط السوشيال
 function createSocialLinks(profile) {
 
   const container =
@@ -122,42 +124,34 @@ function createSocialLinks(profile) {
 
     {
       name: "Instagram",
-
-      icon:
-        "https://cdn.simpleicons.org/instagram",
-
+      imageIcon: "https://cdn.simpleicons.org/instagram",
       url: profile.instagram
     },
 
     {
       name: "Facebook",
-
-      icon:
-        "https://cdn.simpleicons.org/facebook/1877F2",
-
+      imageIcon: "https://cdn.simpleicons.org/facebook/1877F2",
       url: profile.facebook
     },
 
     {
       name: "TikTok",
-
-      icon:
-        "https://cdn.simpleicons.org/tiktok/000000",
-
+      imageIcon: "https://cdn.simpleicons.org/tiktok/000000",
       url: profile.tiktok
-    }
-{
-  name: "Snapchat",
-  icon: "https://cdn.simpleicons.org/snapchat",
-  url: profile.snapchat
-},
+    },
 
-{
-  name: "Website",
-  icon: "https://cdn.simpleicons.org/googlechrome",
-  url: profile.website
-}
-    
+    {
+      name: "Snapchat",
+      imageIcon: "https://cdn.simpleicons.org/snapchat",
+      url: profile.snapchat
+    },
+
+    {
+      name: "Website",
+      icon: "🌐",
+      url: profile.website
+    }
+
   ];
 
 
@@ -180,14 +174,27 @@ function createSocialLinks(profile) {
     link.rel = "noopener noreferrer";
 
 
+    // إذا كان عندنا صورة أيقونة
+    // أو إذا كانت Website نستعمل 🌐
+    const iconHTML = network.imageIcon
+      ? `
+        <img
+          src="${network.imageIcon}"
+          alt="${network.name}"
+        >
+      `
+      : `
+        <span class="website-icon">
+          ${network.icon}
+        </span>
+      `;
+
+
     link.innerHTML = `
 
       <span class="social-icon">
 
-        <img
-          src="${network.icon}"
-          alt="${network.name}"
-        >
+        ${iconHTML}
 
       </span>
 
