@@ -146,7 +146,18 @@ function createSocialLinks(profile) {
 
       url: profile.tiktok
     }
+{
+  name: "Snapchat",
+  icon: "https://cdn.simpleicons.org/snapchat",
+  url: profile.snapchat
+},
 
+{
+  name: "Website",
+  icon: "https://cdn.simpleicons.org/googlechrome",
+  url: profile.website
+}
+    
   ];
 
 
